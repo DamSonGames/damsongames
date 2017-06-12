@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dam Son Games</title>
+	<style type="text/css">
+		body {
+			background: radial-gradient(circle, mediumblue, lightblue)
+		}
+
+		#title {
+			width: 50%;
+			height: 75px;
+			left: 50%;
+			top: 55%;
+			margin: -25%;
+			text-align: center;
+			align-self: center;
+			background-color: deepskyblue;
+			position: absolute;
+			font-family: "Papyrus";
+			font-style: italic;
+			font-size: 60px;
+		}
+
+		#games {
+			width: 50%;
+			left: 50%;
+			top: 80%;
+			margin: -25%;
+			text-align: center;
+			align-self: center;
+			background-color: deepskyblue;
+			position: absolute;
+			font-family: "Arial";
+			font-size: 60px;
+		}
+
+		.block {
+			border-style: ridge groove groove ridge;
+			border-width: 10px;
+			border-color: dodgerblue;
+			border-radius: 100px;
+		}
+	</style>
+</head>
+<body>
+<div id="title" class="block" onclick="window.location = 'index.html'">
+	<span>Dam Son Games</span>
+</div>
+<div id="games" class="block">
+	<span>Games</span><br><br>
+	<img src="Icons/ScriptChem.png">
+	<p style="font-size: 30px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'Games/ScriptChem/Home.html'">ScriptChem</p>
+	<p style="font-size: 30px;">Controls: Mouse</p>
+	<p style="font-size: 30px;">Modify the two inputs together to generate a new output</p>
+	<hr>
+	<img src="Icons/3D Puzzler.png">
+	<p style="font-size: 30px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'Games/3D Puzzler/index.html'">3D Puzzler</p>
+	<p style="font-size: 30px;">Controls: WASD, Arrow keys</p>
+	<p style="font-size: 30px;">Get to the end of each level</p>
+	<hr>
+	<img src="Icons/3D Maze.png">
+	<p style="font-size: 30px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'Games/3D Maze/index.html'">3D Puzzler</p>
+	<p style="font-size: 30px;">Controls: WASD, Arrow keys</p>
+	<p style="font-size: 30px;">Get to the end of each level</p>
+</div>
+</body>
+</html>

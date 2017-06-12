@@ -1,0 +1,493 @@
+#Field1 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 350px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field2 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 450px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field3 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 550px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field4 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 650px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field5 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 750px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field6 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 350px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field7 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 450px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field8 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: blue;
+	position: fixed;
+	top: 125px;
+	left: 550px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field9 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-left-color: blue;
+	position: fixed;
+	top: 125px;
+	left: 650px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field10 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 750px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field11 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 350px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field12 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 450px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field13 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-top-color: blue;
+	border-bottom-color: orange;
+	position: fixed;
+	top: 225px;
+	left: 550px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field14 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 650px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field15 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 750px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field16 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 350px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field17 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 450px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field18 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: orange;
+	position: fixed;
+	top: 325px;
+	left: 550px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field19 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-left-color: orange;
+	position: fixed;
+	top: 325px;
+	left: 650px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field20 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 750px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field21 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 350px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field22 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 450px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field23 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	border-top-color: orange;
+	position: fixed;
+	top: 425px;
+	left: 550px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field24 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 650px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Field25 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 750px;
+	text-align:center;
+	font-size: 180%;
+}
+
+#Select1 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 1000px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select2 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 1100px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select3 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 1000px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select4 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 225px;
+	left: 1100px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select5 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 1000px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select6 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 1100px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select7 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 1000px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select8 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 425px;
+	left: 1100px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select9 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 1000px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#Select10 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 25px;
+	left: 1100px;
+	text-align:center;
+	font-size: 200%;
+}
+
+#ImportField1 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 100px;
+	text-align:center;
+}
+
+#ImportField2 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 125px;
+	left: 200px;
+	text-align:center;
+}
+
+#ExportField {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 325px;
+	left: 150px;
+	text-align:center;
+}
+
+#InventoryField1 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 435px;
+	left: 100px;
+	text-align:center;
+}
+
+#InventoryField2 {
+	width: 98px;
+	height: 98px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 435px;
+	left: 200px;
+	text-align:center;
+}
+
+#StartButton {
+	background-color: lime;
+	width: 198px;
+	height: 40px;
+	border-style: solid;
+	border-width: 2px;
+	position: fixed;
+	top: 255px;
+	left: 100px;
+	text-align:center;
+}

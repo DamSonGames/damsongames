@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<style type="text/css">
+
+.img{
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	border-width: 2px;
+}
+
+.Check{
+	background-image: url("Sources/Images/Icons/Check.png");
+}
+
+.X{
+	background-image: url("Sources/Images/Icons/Wood.png");
+}
+
+.W{
+	background-image: url("Sources/Images/Icons/Brick.png");
+}
+
+.F{
+	background-image: url("Sources/Images/Icons/Finish.png");
+}
+
+.P{
+	background-image: url("Sources/Images/Icons/Player.png");
+}
+
+.Opx{
+	background-image: url("Sources/Images/Icons/OneRight.png");
+}
+
+.Onx{
+	background-image: url("Sources/Images/Icons/OneLeft.png");
+}
+
+.Opz{
+	background-image: url("Sources/Images/Icons/OneDown.png");
+}
+
+.Onz{
+	background-image: url("Sources/Images/Icons/OneUp.png");
+}
+
+.G{
+	background-image: url("Sources/Images/Icons/Glass.png");
+}
+
+#selector{
+	position: fixed;
+	top: -5px;
+	right: -5px;
+	border-color: black;
+	border-width: 5px;
+	border-style: solid;
+	width: 205px;
+	height: 10000px;
+}
+
+#field{
+	background-color: black;
+}
+
+#resultarray{
+	position: absolute;
+	width: 960px;
+	font-size: 10px;
+}
+
+	</style>
+</head>
+<body>
+<div id="field">
+	
+</div>
+<span id="resultarray">&nbsp;</span>
+<div id="selector">
+	<img class="img W" style="top: 20px; right: 150px" onclick="selector = 'W'">
+	<img class="img X" style="top: 20px; right: 50px" onclick="selector = 'X'">
+	<img class="img P" style="top: 80px; right: 150px" onclick="selector = 'P'">
+	<img class="img F" style="top: 80px; right: 50px" onclick="selector = 'F'">
+	<img class="img Onz" style="top: 140px; right: 150px" onclick="selector = 'Onz'">
+	<img class="img Opz" style="top: 140px; right: 50px" onclick="selector = 'Opz'">
+	<img class="img Onx" style="top: 200px; right: 150px" onclick="selector = 'Onx'">
+	<img class="img Opx" style="top: 200px; right: 50px" onclick="selector = 'Opx'">
+	<img class="img G" style="top: 260px; right: 150px" onclick="selector = 'G'">
+	<img class="img Check" style="top: 500px; right: 150px" onclick="GiveArray()">
+</div>
+<script type="text/javascript">
+
+var depth
+var width
+var field = []
+var array = []
+var selector = "X"
+var copytext
+
+Dimensions()
+function Dimensions(){
+	depth = parseInt(window.prompt("Level depth (1 - 30)"))
+	width = parseInt(window.prompt("Level width (1 - 30)"))
+	if(isNaN(depth) || depth <= 0 || depth > 30){
+		window.alert("Invalid")
+		Dimensions()
+	}else if(isNaN(width) || width <= 0 || width > 30){
+		window.alert("Invalid")
+		Dimensions()
+	}
+}
+
+for(i = 0; i < depth; i++){
+	field[i] = []
+	for(j = 0; j < width; j++){
+		field[i][j] = document.createElement("img")
+		field[i][j].className = "img W"
+		field[i][j].style.top = 20 + 32*i + "px"
+		field[i][j].style.left = 30 + 32*j + "px"
+		document.getElementById("field").appendChild(field[i][j])
+		field[i][j].setAttribute("onclick", "this.className = 'img ' + selector; UpdateArray()")
+	}
+}
+
+document.getElementById("resultarray").style.top = parseInt((field[field.length-1][0].style.top).slice(0,3)) + 50 + "px"
+
+UpdateArray()
+function UpdateArray(){
+	for(a = 0; a < field.length; a++){
+		array[a] = []
+		for(b = 0; b < field[a].length; b++){
+			array[a][b] = field[a][b].className.slice(4)
+		}
+	}
+}
+
+function GiveArray(){
+	copytext = JSON.stringify(array)
+	document.getElementById("resultarray").innerHTML = copytext
+}
+
+</script>
+</body>
+</html>

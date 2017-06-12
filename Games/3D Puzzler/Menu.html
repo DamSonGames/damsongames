@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Puzzler</title>
+</head>
+<body style="background-color: black;">
+<span id="span" style="color: white; font-size: 100px; position: fixed;">3D PUZZLER</span>
+<span id="play" style="color: white; font-size: 30px; position: fixed; top: 250px;" onmouseover="ColorOn('play')" onmouseout="ColorOff('play')" onclick="location.href = 'Home.html'">Play game</span>
+<span id="editor" style="color: white; font-size: 30px; position: fixed; top: 300px;" onmouseover="ColorOn('editor')" onmouseout="ColorOff('editor')"  onclick="location.href = 'Editor.html'">Editor</span>
+<span id="wiki" style="color: white; font-size: 30px; position: fixed; top: 350px;" onmouseover="ColorOn('wiki')" onmouseout="ColorOff('wiki')"  onclick="location.href = 'Wiki.html'">Wiki</span>
+<script type="text/javascript">
+	function ColorOn(id){
+		document.getElementById(id).style.color = "red"
+	}
+	function ColorOff(id){
+		document.getElementById(id).style.color = "white"
+	}
+	document.getElementById("span").style.left = window.innerWidth/2 - 275 + "px"
+	document.getElementById("play").style.left = window.innerWidth/2 - 75 + "px"
+	document.getElementById("editor").style.left = window.innerWidth/2 - 50 + "px"
+	document.getElementById("wiki").style.left = window.innerWidth/2 - 45 + "px"
+</script>
+</body>
+</html>

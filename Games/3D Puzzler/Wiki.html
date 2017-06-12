@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wiki</title>
+</head>
+<body>
+<h1>Wiki</h1>
+<div style="position: fixed; top: 100px; left: 50px; width: 150px; height: 300px; border-style: solid; border-color: gray; border-width: 5px; background-color: #cccccc;">
+	<ul>
+		<li style="font-weight: bold;">Blocks:</li>
+		<li onmouseover="this.style.color = 'azure'" onmouseout="this.style.color = 'black'" onclick="Change(0)">Empty</li>
+		<li onmouseover="this.style.color = 'azure'" onmouseout="this.style.color = 'black'" onclick="Change(1)" onclick="Change(0)" onclick="Change(0)">Wall</li>
+		<li onmouseover="this.style.color = 'azure'" onmouseout="this.style.color = 'black'" onclick="Change(2)" onclick="Change(0)">Finish</li>
+		<li onmouseover="this.style.color = 'azure'" onmouseout="this.style.color = 'black'" onclick="Change(3)">One Way Door</li>
+		<li onmouseover="this.style.color = 'azure'" onmouseout="this.style.color = 'black'" onclick="Change(4)">Glass</li>
+	</ul>
+</div>
+<span id="Text" style="top: 120px; left: 250px; position: fixed;"></span>
+<img id="Image" style="position: fixed; top: 100px; left: 800px; width: 256px; height: 256px; border-style: solid; border-color: gray; border-width: 5px;">
+<script type="text/javascript">
+	data = [
+		{
+			image: "Sources/Images/Wood.png",
+			text: "The empty tile is a tile that the player can walk on.<br>It consists of a wooden floor and a concrete ceiling."
+		},
+		{
+			image: "Sources/Images/Brick.png",
+			text: "The wall is a solid tile made of bricks.<br>Each level is mostly made out of walls."
+		},
+		{
+			image: "Sources/Images/Finish.png",
+			text: "The finish tile indicates the end of a level and is the goal of the player.<br>It is transparent and can be walked into, triggering the end of the level."
+		},
+		{
+			image: "Sources/Images/OneWay.png",
+			text: "The one way door is a wall that can be entered via one side but not via the other.<br>This is the first puzzle element added to the game."
+		},
+		{
+			image: "Sources/Images/Glass.png",
+			text: "Glass is a solid tile.<br>It acts the same as a wall, but it is transparent"
+		}
+	]
+
+	function Change(block){
+		document.getElementById("Text").innerHTML = data[block].text
+		document.getElementById("Image").src = data[block].image
+	}
+</script>
+</body>
+</html>

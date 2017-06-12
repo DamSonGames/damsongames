@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Puzzler</title>
+	<style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+      }
+
+      #canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1
+      }
+
+      #title {
+        position: fixed;
+        top: 200px;
+        left: 320px;
+        z-index: 10000;
+        font-family: "Herculanum";
+        font-size: 50px;
+      }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="Libraries/three.min.js"></script>
+<script type="text/javascript" src="Libraries/keyboard.min.js"></script>
+<script type="text/javascript" src="Sources/Levels.js"></script>
+<script type="text/javascript" src="Sources/Geometry.js"></script>
+<script type="text/javascript" src="Script.js"></script>
+</body>
+</html>

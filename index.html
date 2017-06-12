@@ -2,9 +2,104 @@
 <html>
 <head>
 	<title>Dam Son Games</title>
+	<style type="text/css">
+		body {
+			background: radial-gradient(circle, mediumblue, lightblue)
+		}
+
+		#title {
+			opacity: 0;
+			width: 50%;
+			height: 75px;
+			left: 50%;
+			top: 55%;
+			margin: -25%;
+			text-align: center;
+			align-self: center;
+			background-color: deepskyblue;
+			position: absolute;
+			font-family: "Papyrus";
+			font-style: italic;
+			font-size: 60px;
+		}
+
+		#news {
+			opacity: 1;
+			width: 50%;
+			height: 175px;
+			left: 50%;
+			top: 80%;
+			margin: -25%;
+			text-align: center;
+			align-self: center;
+			background-color: deepskyblue;
+			position: absolute;
+			font-family: "Arial";
+			font-size: 60px;
+		}
+
+		#links {
+			opacity: 1;
+			width: 50%;
+			height: 210px;
+			left: 50%;
+			top: 115%;
+			margin: -25%;
+			text-align: center;
+			align-self: center;
+			background-color: deepskyblue;
+			position: absolute;
+			font-family: "Arial";
+			font-size: 60px;
+		}
+
+		.block {
+			border-style: ridge groove groove ridge;
+			border-width: 10px;
+			border-color: dodgerblue;
+			border-radius: 100px;
+		}
+	</style>
 </head>
 <body>
-heyo!
-lol
+<div id="title" class="block">
+	<span>Dam Son Games</span>
+</div>
+<div id="news" class="block">
+	<span>News!</span><br>
+	<span style="font-size: 40px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'news.html'">We got a decent homepage!</span>
+</div>
+<div id="links" class="block">
+	<span>Links:</span><br>
+	<span style="font-size: 40px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'games.html'">Games</span><br>
+	<span style="font-size: 40px; color: blue;" onmouseover="this.style.color = 'yellow'" onmouseout="this.style.color = 'blue'" onclick="window.location = 'about.html'">About</span>
+</div>
+<script type="text/javascript">
+
+document.getElementById("title").addEventListener("load", InitTitle())
+
+function InitTitle(){
+	var op = 0.01
+    document.getElementById("title").style.display = 'block'
+    document.getElementById("news").style.display = 'block'
+    document.getElementById("links").style.display = 'block'
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer)
+        }
+        document.getElementById("title").style.opacity = op
+        document.getElementById("title").style.top = ((60 - (op * 5)) + "%").toString()
+        document.getElementById("title").style.filter = 'alpha(opacity=' + op * 100 + ")"
+        document.getElementById("links").style.opacity = op
+        document.getElementById("links").style.top = ((120 - (op * 5)) + "%").toString()
+        document.getElementById("links").style.filter = 'alpha(opacity=' + op * 100 + ")"
+        document.getElementById("news").style.opacity = op
+        document.getElementById("news").style.top = ((85 - (op * 5)) + "%").toString()
+        document.getElementById("news").style.filter = 'alpha(opacity=' + op * 100 + ")"
+        op += op * 0.01
+    }, 2)
+}
+
+</script>
 </body>
 </html>
