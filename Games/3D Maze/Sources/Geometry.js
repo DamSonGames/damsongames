@@ -17,7 +17,7 @@ var testobject = {
 }
 
 var loader = new THREE.TextureLoader()
-var glassimg = loader.load("Images/Glass.png", function(){renderer.render(scene)})
+var glassimg = loader.load("Sources/Images/Glass.png", function(){renderer.render(scene)})
 
 function Wall(x, z){
 	geometry = new THREE.BoxGeometry(3,3,3)

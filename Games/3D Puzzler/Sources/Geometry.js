@@ -13,12 +13,12 @@ var currentlevel = 0
 var currentpack = 0
 
 var loader = new THREE.TextureLoader()
-var brickimg = loader.load("Images/Brick.png", function(){renderer.render(scene)})
-var glassimg = loader.load("Images/Glass.png", function(){renderer.render(scene)})
-var woodimg = loader.load("Images/Wood.png", function(){renderer.render(scene)})
-var concreteimg = loader.load("Images/Concrete.png", function(){renderer.render(scene)})
-var onewayimg = loader.load("Images/OneWay.png", function(){renderer.render(scene)})
-var finishimg = loader.load("Images/Finish.png", function(){renderer.render(scene)})
+var brickimg = loader.load("Sources/Images/Brick.png", function(){renderer.render(scene)})
+var glassimg = loader.load("Sources/Images/Glass.png", function(){renderer.render(scene)})
+var woodimg = loader.load("Sources/Images/Wood.png", function(){renderer.render(scene)})
+var concreteimg = loader.load("Sources/Images/Concrete.png", function(){renderer.render(scene)})
+var onewayimg = loader.load("Sources/Images/OneWay.png", function(){renderer.render(scene)})
+var finishimg = loader.load("Sources/Images/Finish.png", function(){renderer.render(scene)})
 
 function Wall(x, z){
 	geometry = new THREE.BoxGeometry(3,3,3)
