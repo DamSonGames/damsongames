@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instructions</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body style="font-family: 'Courier';">
+<center><h2>Instructions</h2></center>
+<center><a href="Home.html">Back</a></center>
+<hr>
+<script type="text/javascript">
+	function Display(element){
+		if(document.getElementById(element).style.display == "none"){
+			document.getElementById(element).style.display = "block"
+		}else{
+			document.getElementById(element).style.display = "none"
+		}
+	}
+
+	var cycle = {
+		rock: "rock",
+		grass: "grass",
+		sand: "sand",
+		bridge: "bridge",
+		leverr: "leverg",
+		leverg: "leverb",
+		leverb: "leverr",
+		doorr: "doorg",
+		doorg: "doorb",
+		doorb: "doorr",
+		laseron: "laseroff",
+		laseroff: "laseron",
+		laserhor: "laserver",
+		laserver: "laserhor",
+		mirroru: "mirrord",
+		mirrord: "mirroru",
+		teleport: "teleport"
+	}
+
+	var cyclecount = 0
+
+	function Cycle(){
+		console.log("hi")
+		i = document.getElementsByTagName("SPAN")
+		for(j = 0; j < i.length; j++){
+			if(i[j].className in cycle){
+				i[j].className = cycle[i[j].className]
+				if(i[j].className == "mirroru"){
+					i[j].innerHTML = "//"
+				}else if(i[j].className == "mirrord"){
+					i[j].innerHTML = "\\\\"
+				}else if(i[j].className == "laserhor"){
+					i[j].innerHTML = "=="
+				}else if(i[j].className == "laserver"){
+					i[j].innerHTML = "||"
+				}
+			}
+		}
+		cyclecount++
+	}
+
+	var time = setInterval(function(){Cycle()}, 2000)
+</script>
+<div id="tilediv">
+	<p onclick="Display('rock')"><span class="rock">RR</span> - Rock</p>
+	<p class="tab" style="display: none;" id="rock">↳ Solid tile used as a wall</p>
+	<p onclick="Display('grass')"><span class="grass">GG</span> - Grass</p>
+	<p class="tab" style="display: none;" id="grass">↳ Walkable tile</p>
+	<p onclick="Display('sand')"><span class="sand">SS</span> - Sand</p>
+	<p class="tab" style="display: none;" id="sand">↳ Walkable tile often around water</p>
+	<p onclick="Display('water')"><span class="water">WW</span> - Water</p>
+	<p class="tab" style="display: none;" id="water">↳ Non-walkable tile</p>
+	<p onclick="Display('bridge')"><span class="bridge">==</span> - Bridge</p>
+	<p class="tab" style="display: none;" id="bridge">↳ Walkable tile for crossing water</p>
+	<p onclick="Display('leverr')"><span class="leverr">*-</span> - Lever</p>
+	<p class="tab" style="display: none;" id="leverr">↳ Solid tile for opening and closing doors</p>
+	<p onclick="Display('doorr')"><span class="doorr">||</span> - Door</p>
+	<p class="tab" style="display: none;" id="doorr">↳ Solid tile that can be opened with levers (bridge when opened)</p>
+	<p onclick="Display('laseroff')"><span class="laseroff">=></span> - Laser</p>
+	<p class="tab" style="display: none;" id="laseroff">↳ Solid tile that emits a laser to the right</p>
+	<p onclick="Display('laserhor')"><span class="laserhor">==</span> - Laser beam</p>
+	<p class="tab" style="display: none;" id="laserhor">↳ Beam that can activate levers</p>
+	<p onclick="Display('mirror')"><span class="mirroru">//</span> - Mirror</p>
+	<p class="tab" style="display: none;" id="mirror">↳ Redirects laser beams</p>
+	<p onclick="Display('teleport')"><span class="teleport">88</span> - Teleport</p>
+	<p class="tab" style="display: none;" id="teleport">↳ Tile which teleports you to the corresponding teleport tile</p>
+</div>
+</body>
+</html>
