@@ -1,0 +1,446 @@
+              
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 550px;
+} 
+
+div.absolute1 {
+    position: absolute;
+    top: 125px;
+    right: 100px;
+} 
+
+
+</style>    
+<title>YouTube Simulator</title>
+<script type="text/javascript" src="StorageJSon.min.js"></script>
+</head>
+<body onload = "Background(); update(); wank(); wank2();">
+
+<h1 style="color:white"> YouTube Simulator</h1>
+<p style="color:white" id="TotalViews"></p>
+<p style="color:white" id="TotalSubs"></p>
+<p style="color:white" id="ViewsLatestVideo"></p>
+<p style="color:white" id="Money"></p>
+<p style="color:white" id="DramaText"></p>                           
+<p style="color:white" id="i"></p>
+<p style="color:white" id="Message"></p>
+<p style="color:white" id="item0var"></p>
+<p style="color:white" id="item1var"></p>
+<p style="color:white" id="Viral"></p>
+<p style="color:white" id="CountDown"></p>
+<p style="color:white" id="energy"></p>
+<p style="color:white"> version beta 1.2</p>
+<div class="absolute1">
+    <button id="shopbutton0" onclick=item0()>buy a view bot</button>
+    <button id="shopbutton1" onclick=item1()>buy a commenting bot</button>
+    <button id="shopbutton2" onclick=item2()>bribe keemstar</button>
+    </div>
+<div class="absolute">
+    <button id="button-1" onclick=MakeNewGameFunction()>new gaming series</button>
+<button id="button0" onclick=MakeNewMovieFunction()>new movie/sketch series</button>
+<button id="button1" onclick=MakeGameFunction()>new gaming video</button>
+<button id="button2" onclick=MakeMovieFunction()>new movie/sketch</button>
+</div>
+<button id="button3" onclick=Minecraft()>Minecraft</button>
+<button id="button4" onclick=Angry_Birds()>Angry Birds</button>
+<button id="button5" onclick=GTA_V()>GTA V</button>
+<button id="button6" onclick=KSP()>KSP</button>
+<button id="button7" onclick=eu_4()>eu4</button>
+<button id="button8" onclick=Battlefield_4()>Battlefield 4</button>
+<br><br><br>
+<button onclick=Save()>Save</button>
+<button onclick=Load()>Load</button>
+</div>
+
+<script>
+    
+    var TotalViews = 0;
+    var i = 1;
+    var GameModifier = 1;
+    var u = 10;
+    var energy = 10;
+    var bought1 = 0;
+    var bought2 = 0;
+    var bought3 = 0;
+    var bought4 = 0;
+    var bought5 = 0;
+    var Subs = 0;
+    var AmountOfEpisodes = 0;
+    var interest;
+    var Views = 0;
+    var ViewsGoingUp = 0;
+    var drama = 0;
+    var DramaText = drama * 100;
+    var ViewsFromVPS = 0;
+    var Money = 100;
+    var Modifier0 = 1;
+    var vpsvar = 0;
+    var spsvar = 0;
+    var item0var = 0;
+    var item1var = 0;
+    var VGU0 = 0;
+    var ModifierCost0 = 1;
+    var ModifierCost1 = 1;
+    var ModifierCost2 = 1;
+    var audio = new Audio('Assets/audio/drama.mp3');
+    var audio1 = new Audio('Assets/audio/drama1.mp3');
+    
+    
+    
+        function Background() {
+            
+            document.body.style.backgroundImage = "url('Assets/images/Blue_Blackground copy.jpg')";
+        }
+        
+        
+        setInterval(function update(){
+            if (VGU0 < Views) { 
+            ViewsGoingUp = ViewsGoingUp + (Views / 100);
+            VGU0 = VGU0 + (Views/100);
+            Money = Money + (ViewsGoingUp/50000);
+            }
+            DramaText = drama * 100;
+            if (Money < -100){
+                window.location.reload(true);
+            }
+            
+            if (energy <= 0) {
+           Money = Money - 5;
+           energy = 10;
+           
+           if (drama > 0) {
+            RandomNumber1 = Math.random();
+                if (RandomNumber1 < drama) {
+                    audio.play();
+                    alert("You have been caught using bots by keemstar, next time you should bribe him.\n You lost: " + Subs*.25 + " Subs");
+                    Subs = Subs * 0.75;
+                    drama = 0;
+                    
+                }
+            }
+            
+       }
+       
+        }, 100);
+        
+        
+        setInterval(function wank(){ 
+            TotalViews = TotalViews + (vpsvar/10);
+            ViewsFromVPS = ViewsFromVPS + (vpsvar/10);
+            Money = Money + (ViewsFromVPS/1000)
+            ViewsFromVPS = 0;  
+        }, 100);
+        
+        setInterval(function wank2(){ 
+            Subs = Subs + (spsvar/10); 
+        }, 100);
+        
+        
+       
+        
+        setInterval(function(){ document.getElementById("TotalViews").innerHTML = "Total views: " + Math.round(TotalViews); }, 100);
+        setInterval(function(){ document.getElementById("TotalSubs").innerHTML = "Total subs: " + Math.round(Subs); }, 100);
+        setInterval(function(){ document.getElementById("ViewsLatestVideo").innerHTML = "Views on latest video: " + Math.round(ViewsGoingUp); }, 100);
+        setInterval(function(){ document.getElementById("Money").innerHTML = "$" + Math.round(Money); }, 100);
+        setInterval(function(){ document.getElementById("DramaText").innerHTML = "Drama percentage: " + Math.round(DramaText) + "%"; }, 100);
+        setInterval(function(){ document.getElementById("item0var").innerHTML = "Amount of view bots: " + Math.round(item0var); }, 100);
+        setInterval(function(){ document.getElementById("item1var").innerHTML = "Amount of commenting bots: " + Math.round(item1var); }, 100);
+        setInterval(function(){document.getElementById("shopbutton0").innerHTML = "View bots: $" + Math.round((ModifierCost0 * 50)); ; }, 100);
+        setInterval(function(){document.getElementById("shopbutton1").innerHTML = "Commenting bots: $" + Math.round((ModifierCost1 * 500)); ; }, 100);
+        setInterval(function(){document.getElementById("shopbutton2").innerHTML = "Bribe keemstar: $" + Math.round((ModifierCost2 * 5000)); ; }, 100);
+        setInterval(function(){document.getElementById("energy").innerHTML = "Energy: " + energy;}, 100);
+
+        setInterval(function(){ 
+            if(i == 0){
+                document.getElementById("button1").style.color = "white";
+                document.getElementById("button1").style.background = "red";
+                document.getElementById("button2").style.background = "red";
+                document.getElementById("button2").style.color = "white";
+                                                                                    
+            }else{
+                document.getElementById("button1").style.background = "green";
+                document.getElementById("button1").style.color = "white";
+                document.getElementById("button2").style.background = "green";
+                document.getElementById("button2").style.color = "white";
+            }
+       }, 100);
+       
+      
+    
+    function MakeGameFunction() {
+        if (i == 1) {
+        ViewsGoingUp = 0;
+        VGU0 = 0;
+        energy = energy - 2;
+        Views = 0;
+        AmountOfEpisodes = AmountOfEpisodes + 1;
+        interest = (3/AmountOfEpisodes)*(Subs/4)+15; 
+        RandomNumber = (Math.floor(Math.random() * 30) + 5)/10;
+        Views = (interest * RandomNumber) * GameModifier;
+        Subs = Subs + (Views/15);
+        
+        TotalViews = TotalViews + Views;
+       
+        i = 0;        
+        
+    setTimeout(function() { i = 1; }, 10000);    
+    }
+        
+        else {
+            document.getElementById("Message").innerHTML = "You have to wait ten seconds after clicking the buton";
+        }
+        
+        
+        
+    
+        
+    }
+    
+    function MakeMovieFunction() {     
+        if (i == 1) {
+        energy = energy - 6;
+        VGU0 = 0;
+        ViewsGoingUp = 0;
+        Views = 0;
+        AmountOfEpisodes = AmountOfEpisodes + 1;
+        interest = (5/AmountOfEpisodes)*(Subs/2)+15; 
+        RandomNumber = (Math.floor(Math.random() * 50) + 5)/10;
+        if ( RandomNumber >= 4.5){
+            RandomNumber = 100;
+            GoneViral = true;
+            document.getElementById("Viral").innerHTML = "Your video has gone Viral!!";
+            setTimeout(function(){         
+         document.getElementById("Viral").innerHTML = " ";
+        }, 30000);
+        }
+        Views = interest * RandomNumber;
+        Subs = Subs + (Views/15);
+       
+        TotalViews = TotalViews + Views;
+         if (energy < 0.1) {
+           Money = Money - 5;
+           energy = 10;
+       }
+        i = 0;        
+      setTimeout(function(){         
+        for(u = 10; u >= 0; u--){
+                                  
+        }
+        }, 1000);
+        
+    setTimeout(function() { i = 1; }, 30000);    
+    }
+        
+        else {
+            document.getElementById("Message").innerHTML = "You have to wait thirty seconds after clicking the buton";
+        }
+        
+        
+        
+    
+        
+    }
+    
+    function item0() {
+        vpsvar = vpsvar + (1 * Modifier0);
+        item0var = item0var + 1;
+        Money = Money - (50 * ModifierCost0);
+        ModifierCost0 = ModifierCost0 * 1.1;
+        drama = drama + 0.02;
+    }
+    
+    function item1() {
+        spsvar = spsvar + (1 * Modifier0);
+        item1var = item1var + 1;
+        Money = Money - (500 * ModifierCost1);
+        ModifierCost1 = ModifierCost1 * 1.1;
+        drama = drama + 0.02;
+    }
+    
+    function item2() {
+        Money = Money - (5000 * ModifierCost2);
+        ModifierCost2 = ModifierCost2 * 1.1;
+        drama = 0;
+        audio1.play();
+    }
+    
+    function MakeNewGameFunction() {
+        if (AmountOfEpisodes > 0) {
+        AmountOfEpisodes = 0;
+        
+        }
+    }
+    
+    function MakeNewMovieFunction() {
+        if (AmountOfEpisodes > 0) {
+        AmountOfEpisodes = 0;
+        
+        }
+    } 
+    
+    function Minecraft() {
+        GameModifier = 1.3;
+        if (bought1 == 0) {
+            bought1 = 1;
+            Money = Money - 25;
+        }
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button3").style.background = "green";
+            document.getElementById("button3").style.color = "white";  
+    }
+    
+    function Angry_Birds() {
+        GameModifier = 0.5;
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button4").style.background = "green";
+            document.getElementById("button4").style.color = "white";
+        
+    }
+    
+    function GTA_V() {
+        GameModifier = 1.5;
+        if (bought3 == 0) {
+            bought3 = 1;
+            Money = Money - 60;
+        }
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button5").style.background = "green";
+            document.getElementById("button5").style.color = "white";
+        
+    }
+    
+    function KSP() {
+        GameModifier = 1.1;
+        if (bought4 == 0) {
+            bought4 = 1;
+            Money = Money - 40;
+        }
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button6").style.background = "green";
+            document.getElementById("button6").style.color = "white";
+        
+    }
+    
+    function eu_4() {
+        GameModifier = 0.9;
+        if (bought5 == 0) {
+            bought5 = 1;
+            Money = Money - 40;
+        }
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button7").style.background = "green";
+            document.getElementById("button7").style.color = "white";
+        
+    }
+    
+    function Battlefield_4() {
+        GameModifier = 1.1;
+        if (bought2 == 0) {
+            bought2 = 1;
+            Money = Money - 25;
+        }
+            document.getElementById("button3").style.background = "white";
+            document.getElementById("button4").style.background = "white";
+            document.getElementById("button5").style.background = "white";
+            document.getElementById("button6").style.background = "white";
+            document.getElementById("button7").style.background = "white";
+            document.getElementById("button8").style.background = "white";
+            document.getElementById("button3").style.color = "black";
+            document.getElementById("button4").style.color = "black";
+            document.getElementById("button5").style.color = "black";
+            document.getElementById("button6").style.color = "black";
+            document.getElementById("button7").style.color = "black";
+            document.getElementById("button8").style.color = "black";
+            
+            document.getElementById("button8").style.background = "green";
+            document.getElementById("button8").style.color = "white";
+        
+    }
+    
+    function Save(){
+        store.set("Views", Views);
+        store.set("AmountOfEpisodes", AmountOfEpisodes);
+        store.set("interest", interest);
+        store.set("Subs", Subs);
+        store.set("Money", Money);
+        store.set("TotalViews", TotalViews);
+    }
+
+    function Load(){
+        Views = store.get("Views");
+        AmountOfEpisodes = store.get("AmountOfEpisodes");
+        interest = store.get("interest");
+        Subs = store.get("Subs");
+        Money = store.get("Money");
+        TotalViews = store.get("TotalViews");
+    }
+    
+</script>    
+</body>
+</html>
