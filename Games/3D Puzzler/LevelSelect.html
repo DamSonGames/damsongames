@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level Select</title>
+	<style type="text/css">
+		.packtext {
+			margin-left: 50px;
+			color: black;
+			font-size: 30px;
+			font-family: "Monaco";
+		}
+
+		#back {
+			bottom: 50px;
+			position: fixed;
+		}
+	</style>
+</head>
+<body style="background-image: url('Misc Images/BlurredBackground.png'); background-size: 100%;">
+<span id="pack1" class="packtext" onmouseover="ColorOn('pack1')" onmouseout="ColorOff('pack1')" onclick="location.href = 'Home.html?pack=1'">Pack 1 (5 Levels)</span><br>
+<span id="pack2" class="packtext" onmouseover="ColorOn('pack2')" onmouseout="ColorOff('pack2')" onclick="location.href = 'Home.html?pack=2'">Pack 2 (4 Levels)</span><br>
+<span id="pack3" class="packtext" onmouseover="ColorOn('pack3')" onmouseout="ColorOff('pack3')" onclick="location.href = 'Home.html?pack=3'">Romek's Pack (3 Levels)</span><br>
+<span id="back" class="packtext" onmouseover="ColorOn('back')" onmouseout="ColorOff('back')" onclick="location.href = 'Menu.html'">Back</span><br>
+<script type="text/javascript">
+	function ColorOn(id){
+		document.getElementById(id).style.color = "yellow"
+	}
+	function ColorOff(id){
+		document.getElementById(id).style.color = "black"
+	}
+</script>
+</body>
+</html>

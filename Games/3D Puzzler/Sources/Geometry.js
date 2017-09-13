@@ -158,6 +158,10 @@ function Collision(){
 	}
 }
 
+var url_string = window.location.href
+var url = new URL(url_string)
+var pack = parseInt(url.searchParams.get("pack"))
+
 function LoadLevel(level){
 	walls = []
 	glass = []
@@ -169,30 +173,14 @@ function LoadLevel(level){
 	fakewalls = []
 	scene = new THREE.Scene()
 	if(level === undefined){
-		var pack = prompt("Load level pack: 1-" + levelpacks.length) - 1
-		currentpack = pack
-		var level = prompt("Load level: 1-" + levelpacks[pack].length) - 1
-		currentlevel = level
-		if(isNaN(pack) || pack < 0 || pack >= levelpacks.length){
-			window.alert("Invalid")
-			LoadLevel()
-		}else if(isNaN(level) || level < 0 || level >= levelpacks[pack].length){
-			window.alert("Invalid")
-			LoadLevel()
-		}
-		Create(pack, level)
+		Create(pack-1, 0)
 	}else{
 		currentlevel += level
-		if(currentlevel < levelpacks[currentpack].length){
-			Create(currentpack, currentlevel)
+		if(currentlevel < levelpacks[pack-1].length){
+			Create(pack-1, currentlevel)
 		}else{
 			alert("You completed the level pack!")
-			var leave = prompt("Continue? (yes/no)")
-			if(leave === "no"){
-				location.href = "Menu.html"
-			}else if(leave === "yes"){				
-				LoadLevel()
-			}
+			location.href = "LevelSelect.html"
 		}
 	}
 }
