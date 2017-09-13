@@ -21,6 +21,8 @@ var moveBackwards = 0
 var moveRight = 0
 var turnLeft = 0
 var turnRight = 0
+var turnUp = 0
+var turnDown = 0
 
 keyboardJS.bind('w', function(e){
   moveForwards = 1
@@ -58,6 +60,18 @@ keyboardJS.bind('right', function(e){
   turnRight = 0
 })
 
+keyboardJS.bind('up', function(e){
+  turnUp = 1
+}, function(e){
+  turnUp = 0
+})
+
+keyboardJS.bind('down', function(e){
+  turnDown = 1
+}, function(e){
+  turnDown = 0
+})
+
 keyboardJS.bind('l', function(e){
   LoadLevel()
 })
@@ -89,10 +103,23 @@ function MovePlayer(){
   if(turnLeft === 1){
     camera.rotation.y += ((5*Math.PI)/360)
   }
+  if(turnUp === 1){
+    camera.rotation.x += ((5*Math.PI)/360)
+    if(camera.rotation.x > 0.5*Math.PI){
+      camera.rotation.x = 0.5*Math.PI
+    }
+  }
+  if(turnDown === 1){
+    camera.rotation.x -= ((5*Math.PI)/360)
+    if(camera.rotation.x < -0.5*Math.PI){
+      camera.rotation.x = -0.5*Math.PI
+    }
+  }
 }
 
 var scene = new THREE.Scene()
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000)
+camera.rotation.order = "YXZ"
 
 var renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
