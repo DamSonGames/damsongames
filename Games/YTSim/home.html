@@ -1,28 +1,158 @@
-              
 <!DOCTYPE html>
 <html>
 <head>
 <style>
+    #nav {
+    height: 250px;
+    width: 1280px;
+    top: 500px;
+    float:left;
+    padding: 5px;
+}
+
 div.absolute {
     position: absolute;
     top: 80px;
-    right: 550px;
+    right: 480px;
 } 
 
 div.absolute1 {
     position: absolute;
     top: 125px;
     right: 100px;
-} 
+}
+ 
+div.absolute2 {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+}
 
+div.absolute3 {
+    position: absolute;
+    top: 175px;
+    right: 100px;
+}
 
+div.absolute4 {
+    position: absolute;
+    top: 0px;
+    right: 540px;
+}
+
+div.absolute5 {
+    position: absolute;
+    top: 125px;
+    right: 1280px;
+}
+
+div.absolute6 {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+div.absolute7 {
+    position: absolute;
+    top: 225px;
+    right: 100px;
+}
+
+div.absolute8 {
+    position: absolute;
+    top: 350px;
+    right: 1280x;
+}
+
+div.absolute9 {
+    position: absolute;
+    top: 350px;
+    right: 1100px;
+}
+
+div.absolute10 {
+    position: absolute;
+    top: 350px;
+    right: 1035px;
+}
+
+div.absolute11 {
+    position: absolute;
+    top: 375px;
+    right: 1218px;
+}
+
+div.absolute12 {
+    position: absolute;
+    top: 375px;
+    right: 1165px;
+}
+
+div.absolute13 {
+    position: absolute;
+    top: 375px;
+    right: 1070px;
+}
+
+div.absolute14 {
+    position: absolute;
+    top: 225px;
+    right: 100px;
+}
+
+div.absolute15 {
+    position: absolute;
+    top: 225px;
+    right: 100px;
+}
+
+div.absolute16 {
+    position: absolute;
+    top: 225px;
+    right: 100px;
+}
+
+div.pixelpc {
+    position: absolute;
+    top: 125px;
+    right: 480px; 
+}
+
+div.pixelpc1 {
+    position: absolute;
+    top: 217px;
+    right: 480px; 
+}
+
+div.VbotText {
+    position: absolute;
+    top: 90px;
+    right: 650px; 
+}
+
+div.CbotText {
+    position: absolute;
+    top: 180px;
+    right: 622px; 
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 40px;
+}
 </style>    
 <title>YouTube Simulator</title>
 <script type="text/javascript" src="StorageJSon.min.js"></script>
 </head>
-<body onload = "Background(); update(); wank(); wank2();">
+<body onload = "Background(); update(); wank(); wank2(); RandomEvents();">
 
+<div class="absolute4">
 <h1 style="color:white"> YouTube Simulator</h1>
+</div>
+<h2 style="color:white"> YTS</h2>
 <p style="color:white" id="TotalViews"></p>
 <p style="color:white" id="TotalSubs"></p>
 <p style="color:white" id="ViewsLatestVideo"></p>
@@ -30,39 +160,65 @@ div.absolute1 {
 <p style="color:white" id="DramaText"></p>                           
 <p style="color:white" id="i"></p>
 <p style="color:white" id="Message"></p>
-<p style="color:white" id="item0var"></p>
-<p style="color:white" id="item1var"></p>
 <p style="color:white" id="Viral"></p>
 <p style="color:white" id="CountDown"></p>
 <p style="color:white" id="energy"></p>
-<p style="color:white"> version beta 1.2</p>
-<div class="absolute1">
-    <button id="shopbutton0" onclick=item0()>buy a view bot</button>
-    <button id="shopbutton1" onclick=item1()>buy a commenting bot</button>
-    <button id="shopbutton2" onclick=item2()>bribe keemstar</button>
-    </div>
-<div class="absolute">
-    <button id="button-1" onclick=MakeNewGameFunction()>new gaming series</button>
-<button id="button0" onclick=MakeNewMovieFunction()>new movie/sketch series</button>
-<button id="button1" onclick=MakeGameFunction()>new gaming video</button>
-<button id="button2" onclick=MakeMovieFunction()>new movie/sketch</button>
-</div>
+<p style="color:white"> version beta 1.4</p>
+<div class="absolute8">
 <button id="button3" onclick=Minecraft()>Minecraft</button>
+</div> <div class="absolute9">
 <button id="button4" onclick=Angry_Birds()>Angry Birds</button>
+</div> <div class="absolute10">
 <button id="button5" onclick=GTA_V()>GTA V</button>
+</div> <div class="absolute11">
 <button id="button6" onclick=KSP()>KSP</button>
+</div> <div class="absolute12">
 <button id="button7" onclick=eu_4()>eu4</button>
+</div> <div class="absolute13">
 <button id="button8" onclick=Battlefield_4()>Battlefield 4</button>
+</div>
 <br><br><br>
 <button onclick=Save()>Save</button>
 <button onclick=Load()>Load</button>
+<div class="absolute1">
+    <button id="shopbutton0" onclick=item0()>buy a view bot</button>
+    </div>
+    <div class="absolute2">
+    <button id="shopbutton1" onclick=item1()>buy a commenting bot</button>
+    </div>
+    <div class="absolute3">
+    <button id="shopbutton2" onclick=item2()>bribe keemstar</button>
+    </div>
+    <div class="absolute6">
+    <button id="button-1" onclick=MakeNewGameFunction()>new gaming series</button>
+    </div>
+    <div class="absolute7">
+    <button id="button0" onclick=MakeNewMovieFunction()>new movie/sketch series</button>
+    </div>
+<div class="absolute">
+<button id="button1" onclick=MakeGameFunction()>new gaming video</button>
+<button id="button2" onclick=MakeMovieFunction()>new movie/sketch</button>
+<button id="VlogButton" onclick=MakeVlogFunction()>new Vlog</button>
 </div>
 
+</div>
+<div class="pixelpc">
+<img id="button_border" src="Assets/images/button_border1.png" width="400" height="64">
+</div>
+<div class="pixelpc1">
+<img id="button_border1" src="Assets/images/button_border1.png" width="400" height="64">
+</div>
+<div class="VbotText">
+<p style="color:white" id="item0var"></p>
+</div>
+<div class="CbotText">
+<p style="color:white" id="item1var"></p>
+</div>
 <script>
     
     var TotalViews = 0;
     var i = 1;
-    var GameModifier = 1;
+    var GameModifier = 0;
     var u = 10;
     var energy = 10;
     var bought1 = 0;
@@ -71,19 +227,23 @@ div.absolute1 {
     var bought4 = 0;
     var bought5 = 0;
     var Subs = 0;
-    var AmountOfEpisodes = 0;
+    var AmountOfGEpisodes = 0;
+    var AmountOfSEpisodes = 0;
     var interest;
     var Views = 0;
+    var seconds = 0;
     var ViewsGoingUp = 0;
     var drama = 0;
     var DramaText = drama * 100;
     var ViewsFromVPS = 0;
-    var Money = 100;
+    var Money = 100000;
     var Modifier0 = 1;
     var vpsvar = 0;
     var spsvar = 0;
     var item0var = 0;
     var item1var = 0;
+    var RN2 = 1;
+    var CurrentGame = "nothing";
     var VGU0 = 0;
     var ModifierCost0 = 1;
     var ModifierCost1 = 1;
@@ -98,6 +258,42 @@ div.absolute1 {
             document.body.style.backgroundImage = "url('Assets/images/Blue_Blackground copy.jpg')";
         }
         
+        setInterval(function RandomEvents(){
+            if (energy <= 0){
+            RandomNumber3 = Math.random();
+            
+            
+            
+            
+            if (RandomNumber3 <= 0.1) {
+                var Confirm3 = confirm("You can choose to make a fake prank video, this will give you a lot of views \nbut if you get caught you're pretty much fucked");
+                if (Confirm3 = true) {
+                    Views = 0;
+                    var VideoName0 = prompt("Enter the name of your prank video.");
+                    var SearchString0 = VideoName0.search(/gone sexual/i);
+                    if (SearchString0 != -1) {
+                       Views = Views + (1000000*(RandomNumber3*15));
+                       TotalViews = TotalViews + Views;
+
+                    }
+                    else {
+                    Views = Views + 100000*(RandomNumber3*15);
+                    TotalViews = TotalViews + Views;
+                }
+                    RandomNumber3_1 = Math.random();
+                    if (RandomNumber3_1 < 0.25) {
+                        audio.play();
+                        alert("You dun goofed up bruh, you got caught by keemstar because you made fake pranks.");
+                        Subs = Subs * 0.75;
+                }
+                }
+                else {
+                    alert("You probably did the right thing");
+                }
+           }
+            }
+        }, 100);
+        
         
         setInterval(function update(){
             if (VGU0 < Views) { 
@@ -107,6 +303,7 @@ div.absolute1 {
             }
             DramaText = drama * 100;
             if (Money < -100){
+                alert("    Game over\nYou dun Goofed");
                 window.location.reload(true);
             }
             
@@ -114,11 +311,22 @@ div.absolute1 {
            Money = Money - 5;
            energy = 10;
            
+           RandomNumber2 = Math.random();
+           RandomNumber2 = RandomNumber2 * RN2;
+            if (RandomNumber2 < 0.01){
+                RN2 = RN2 - 0.1;
+                audio.play();
+            }
+            
+           if (RandomNumber2 < 0.01){
+                alert("Keemstar thinks you raped people, bribe him next time.\nYou lost: " + Math.round(Subs*0.25) + " Subs");
+            }
+           
            if (drama > 0) {
             RandomNumber1 = Math.random();
                 if (RandomNumber1 < drama) {
                     audio.play();
-                    alert("You have been caught using bots by keemstar, next time you should bribe him.\n You lost: " + Subs*.25 + " Subs");
+                    alert("You have been caught using bots by keemstar, next time you should bribe him.\nYou lost: " + Math.round(Subs*.1) + " Subs");
                     Subs = Subs * 0.75;
                     drama = 0;
                     
@@ -149,9 +357,12 @@ div.absolute1 {
         setInterval(function(){ document.getElementById("ViewsLatestVideo").innerHTML = "Views on latest video: " + Math.round(ViewsGoingUp); }, 100);
         setInterval(function(){ document.getElementById("Money").innerHTML = "$" + Math.round(Money); }, 100);
         setInterval(function(){ document.getElementById("DramaText").innerHTML = "Drama percentage: " + Math.round(DramaText) + "%"; }, 100);
-        setInterval(function(){ document.getElementById("item0var").innerHTML = "Amount of view bots: " + Math.round(item0var); }, 100);
-        setInterval(function(){ document.getElementById("item1var").innerHTML = "Amount of commenting bots: " + Math.round(item1var); }, 100);
+        setInterval(function(){ document.getElementById("item0var").innerHTML = "View bots: " + Math.round(item0var); }, 100);
+        setInterval(function(){ document.getElementById("item1var").innerHTML = "Commenting bots: " + Math.round(item1var); }, 100);
         setInterval(function(){document.getElementById("shopbutton0").innerHTML = "View bots: $" + Math.round((ModifierCost0 * 50)); ; }, 100);
+        setInterval(function(){document.getElementById("shopbutton0").innerHTML = "View bots: $" + Math.round((ModifierCost0 * 50)); ; }, 100);
+        setInterval(function(){document.getElementById("button2").innerHTML = "Make Movie/Sketch episode " + (AmountOfSEpisodes + 1); }, 100);
+        setInterval(function(){document.getElementById("button1").innerHTML = "Make " + CurrentGame + " episode " + (AmountOfGEpisodes + 1); }, 100);
         setInterval(function(){document.getElementById("shopbutton1").innerHTML = "Commenting bots: $" + Math.round((ModifierCost1 * 500)); ; }, 100);
         setInterval(function(){document.getElementById("shopbutton2").innerHTML = "Bribe keemstar: $" + Math.round((ModifierCost2 * 5000)); ; }, 100);
         setInterval(function(){document.getElementById("energy").innerHTML = "Energy: " + energy;}, 100);
@@ -162,29 +373,43 @@ div.absolute1 {
                 document.getElementById("button1").style.background = "red";
                 document.getElementById("button2").style.background = "red";
                 document.getElementById("button2").style.color = "white";
+                document.getElementById("VlogButton").style.background = "red";
+                document.getElementById("VlogButton").style.color = "white";
                                                                                     
             }else{
                 document.getElementById("button1").style.background = "green";
                 document.getElementById("button1").style.color = "white";
                 document.getElementById("button2").style.background = "green";
                 document.getElementById("button2").style.color = "white";
+                document.getElementById("VlogButton").style.background = "green";
+                document.getElementById("VlogButton").style.color = "white";
             }
        }, 100);
        
       
     
     function MakeGameFunction() {
-        if (i == 1) {
+        if (GameModifier != 0){
+        if (i == 1) {     
         ViewsGoingUp = 0;
         VGU0 = 0;
         energy = energy - 2;
         Views = 0;
-        AmountOfEpisodes = AmountOfEpisodes + 1;
-        interest = (3/AmountOfEpisodes)*(Subs/4)+15; 
-        RandomNumber = (Math.floor(Math.random() * 30) + 5)/10;
+        seconds = 10;
+        AmountOfGEpisodes = AmountOfGEpisodes + 1;
+        interest = (3/AmountOfGEpisodes)*(Subs/8)+15; 
+        RandomNumber = (Math.floor(Math.random() * 15) + 5)/10;
         Views = (interest * RandomNumber) * GameModifier;
-        Subs = Subs + (Views/15);
+        if (Subs > 50000000) {
+            Subs = Subs + (Views/500);
+        }
+        else if (Subs > 1000000) {
+        Subs = Subs + (Views/100);
+        }
         
+        else {
+            Subs = Subs + (Views/15);
+        }
         TotalViews = TotalViews + Views;
        
         i = 0;        
@@ -193,13 +418,26 @@ div.absolute1 {
     }
         
         else {
-            document.getElementById("Message").innerHTML = "You have to wait ten seconds after clicking the buton";
+           if (seconds == 10){
+            alert("You have to wait ten seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 20){
+            alert("You have to wait twenty seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 30){
+            alert("You have to wait thirty seconds after clicking the button"); 
+        }
+        
         }
         
         
         
-    
-        
+        }
+        else {
+            alert("You have to select a game first");
+        }
     }
     
     function MakeMovieFunction() {     
@@ -208,11 +446,12 @@ div.absolute1 {
         VGU0 = 0;
         ViewsGoingUp = 0;
         Views = 0;
-        AmountOfEpisodes = AmountOfEpisodes + 1;
-        interest = (5/AmountOfEpisodes)*(Subs/2)+15; 
+        seconds = 30;
+        AmountOfSEpisodes = AmountOfSEpisodes + 1;
+        interest = (5/AmountOfSEpisodes)*(Subs/2)+15; 
         RandomNumber = (Math.floor(Math.random() * 50) + 5)/10;
         if ( RandomNumber >= 4.5){
-            RandomNumber = 100;
+            RandomNumber = 100 + RandomNumber;
             GoneViral = true;
             document.getElementById("Viral").innerHTML = "Your video has gone Viral!!";
             setTimeout(function(){         
@@ -220,13 +459,19 @@ div.absolute1 {
         }, 30000);
         }
         Views = interest * RandomNumber;
-        Subs = Subs + (Views/15);
+        if (Subs > 50000000) {
+            Subs = Subs + (Views/500);
+        }
+        else if (Subs > 1000000) {
+        Subs = Subs + (Views/100);
+        }
+        
+        else {
+            Subs = Subs + (Views/15);
+        }
        
         TotalViews = TotalViews + Views;
-         if (energy < 0.1) {
-           Money = Money - 5;
-           energy = 10;
-       }
+         
         i = 0;        
       setTimeout(function(){         
         for(u = 10; u >= 0; u--){
@@ -238,14 +483,100 @@ div.absolute1 {
     }
         
         else {
-            document.getElementById("Message").innerHTML = "You have to wait thirty seconds after clicking the buton";
+        if (seconds == 10){
+            alert("You have to wait ten seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 20){
+            alert("You have to wait twenty seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 30){
+            alert("You have to wait thirty seconds after clicking the button"); 
         }
+                
+    }
         
-        
+    
+    }    
         
     
         
+    
+    
+    
+    function MakeVlogFunction(){
+        if (i == 1) {
+        energy = energy - 4;
+        VGU0 = 0;
+        ViewsGoingUp = 0;
+        Views = 0;
+        seconds = 20;
+        interest = (Subs/4)+15; 
+        RandomNumber = (Math.floor(Math.random() * 20) + 5)/10;
+        
+        var VideoName1 = prompt("Enter the name of your vlog");
+        var SearchString1 = VideoName1.search(/explosion/i);
+        var SearchString1_1 = VideoName1.search(/boobs/i);
+        var SearchString1_2 = VideoName1.search(/pussy/i);
+        if (SearchString1 != -1){
+            RandomNumber = RandomNumber + 0.5;
+        }
+        
+        if (SearchString1_1 != -1){
+            RandomNumber = RandomNumber + 0.5;
+        }
+        
+        if (SearchString1_2 != -1){
+            RandomNumber = RandomNumber + 0.5;
+        }
+        
+        Views = interest * RandomNumber;
+        
+        if (Subs > 50000000) {
+            Subs = Subs + (Views/500);
+        }
+        else if (Subs > 1000000) {
+        Subs = Subs + (Views/100);
+        }
+        
+        else {
+            Subs = Subs + (Views/15);
+        }
+        
+       
+        TotalViews = TotalViews + Views;
+         
+        i = 0;        
+      setTimeout(function(){         
+        for(u = 10; u >= 0; u--){
+                                  
+        }
+        }, 1000);
+        
+    setTimeout(function() { i = 1; }, 20000);    
     }
+        
+        else {
+        if (seconds == 10){
+            alert("You have to wait ten seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 20){
+            alert("You have to wait twenty seconds after clicking the button"); 
+        } 
+        
+        if (seconds == 30){
+            alert("You have to wait thirty seconds after clicking the button"); 
+        }
+         
+               
+    }
+        
+    
+    }    
+    
+    
     
     function item0() {
         vpsvar = vpsvar + (1 * Modifier0);
@@ -253,6 +584,39 @@ div.absolute1 {
         Money = Money - (50 * ModifierCost0);
         ModifierCost0 = ModifierCost0 * 1.1;
         drama = drama + 0.02;
+        if (item0var == 1){
+       document.getElementById("button_border").src = "Assets/images/button_border2.png";
+       }  
+       if (item0var == 2){
+       document.getElementById("button_border").src = "Assets/images/button_border3.png";
+       }
+       if (item0var == 3){
+       document.getElementById("button_border").src = "Assets/images/button_border4.png";
+       }
+       if (item0var == 4){
+       document.getElementById("button_border").src = "Assets/images/button_border5.png";
+       }
+       if (item0var == 5){
+       document.getElementById("button_border").src = "Assets/images/button_border6.png";
+       }
+       if (item0var == 6){
+       document.getElementById("button_border").src = "Assets/images/button_border7.png";
+       }
+       if (item0var == 7){
+       document.getElementById("button_border").src = "Assets/images/button_border8.png";
+       }
+       if (item0var == 8){
+       document.getElementById("button_border").src = "Assets/images/button_border9.png";
+       }
+       if (item0var == 9){
+       document.getElementById("button_border").src = "Assets/images/button_border10.png";
+       }
+       if (item0var == 10){
+       document.getElementById("button_border").src = "Assets/images/button_border11.png";
+       }
+       if (item0var == 11){
+       document.getElementById("button_border").src = "Assets/images/button_border12.png";
+       }
     }
     
     function item1() {
@@ -261,6 +625,39 @@ div.absolute1 {
         Money = Money - (500 * ModifierCost1);
         ModifierCost1 = ModifierCost1 * 1.1;
         drama = drama + 0.02;
+        if (item1var == 1){
+       document.getElementById("button_border1").src = "Assets/images/button_border2.png";
+       }  
+       if (item1var == 2){
+       document.getElementById("button_border1").src = "Assets/images/button_border3.png";
+       }
+       if (item1var == 3){
+       document.getElementById("button_border1").src = "Assets/images/button_border4.png";
+       }
+       if (item1var == 4){
+       document.getElementById("button_border1").src = "Assets/images/button_border5.png";
+       }
+       if (item1var == 5){
+       document.getElementById("button_border1").src = "Assets/images/button_border6.png";
+       }
+       if (item1var == 6){
+       document.getElementById("button_border1").src = "Assets/images/button_border7.png";
+       }
+       if (item1var == 7){
+       document.getElementById("button_border1").src = "Assets/images/button_border8.png";
+       }
+       if (item1var == 8){
+       document.getElementById("button_border1").src = "Assets/images/button_border9.png";
+       }
+       if (item1var == 9){
+       document.getElementById("button_border1").src = "Assets/images/button_border10.png";
+       }
+       if (item1var == 10){
+       document.getElementById("button_border1").src = "Assets/images/button_border11.png";
+       }
+       if (item1var == 11){
+       document.getElementById("button_border1").src = "Assets/images/button_border12.png";
+       }
     }
     
     function item2() {
@@ -271,21 +668,30 @@ div.absolute1 {
     }
     
     function MakeNewGameFunction() {
-        if (AmountOfEpisodes > 0) {
-        AmountOfEpisodes = 0;
+        if (AmountOfGEpisodes >= 10) {
+        AmountOfGEpisodes = 0;
         
+        }
+        else {
+            alert("You have to have 10 episodes in order to make a new series\n(otherwise you would be able to take advantage of the bonus you get with the first episode)");
         }
     }
     
     function MakeNewMovieFunction() {
-        if (AmountOfEpisodes > 0) {
-        AmountOfEpisodes = 0;
+        if (AmountOfSEpisodes >= 10) {
+        AmountOfSEpisodes = 0;
         
         }
+        
+        else {
+            alert("You have to have 10 episodes in order to make a new series\n(otherwise you would be able to take advantage of the bonus you get with the first episode)");
+        }
+        
     } 
     
     function Minecraft() {
         GameModifier = 1.3;
+        CurrentGame = "Minecraft";
         if (bought1 == 0) {
             bought1 = 1;
             Money = Money - 25;
@@ -308,6 +714,7 @@ div.absolute1 {
     }
     
     function Angry_Birds() {
+        CurrentGame = "Angry Birds";
         GameModifier = 0.5;
             document.getElementById("button3").style.background = "white";
             document.getElementById("button4").style.background = "white";
@@ -328,6 +735,7 @@ div.absolute1 {
     }
     
     function GTA_V() {
+        CurrentGame = "GTA V";
         GameModifier = 1.5;
         if (bought3 == 0) {
             bought3 = 1;
@@ -352,7 +760,8 @@ div.absolute1 {
     }
     
     function KSP() {
-        GameModifier = 1.1;
+        CurrentGame = "KSP";
+        GameModifier = 1;
         if (bought4 == 0) {
             bought4 = 1;
             Money = Money - 40;
@@ -376,6 +785,7 @@ div.absolute1 {
     }
     
     function eu_4() {
+        CurrentGame = "EU 4";
         GameModifier = 0.9;
         if (bought5 == 0) {
             bought5 = 1;
@@ -400,6 +810,7 @@ div.absolute1 {
     }
     
     function Battlefield_4() {
+        CurrentGame = "Battlefield 4";
         GameModifier = 1.1;
         if (bought2 == 0) {
             bought2 = 1;
@@ -425,7 +836,10 @@ div.absolute1 {
     
     function Save(){
         store.set("Views", Views);
-        store.set("AmountOfEpisodes", AmountOfEpisodes);
+        store.set("Drama", drama);
+        
+        store.set("AmountOfGEpisodes", AmountOfGEpisodes);
+        store.set("AmountOfSEpisodes", AmountOfSEpisodes);
         store.set("interest", interest);
         store.set("Subs", Subs);
         store.set("Money", Money);
@@ -434,7 +848,10 @@ div.absolute1 {
 
     function Load(){
         Views = store.get("Views");
-        AmountOfEpisodes = store.get("AmountOfEpisodes");
+        drama = store.get("Drama");
+        
+        AmountOfGEpisodes = store.get("AmountOfGEpisodes");
+        AmountOfSEpisodes = store.get("AmountOfSEpisodes");
         interest = store.get("interest");
         Subs = store.get("Subs");
         Money = store.get("Money");
